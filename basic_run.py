@@ -119,7 +119,7 @@ optimizer = nk.optimizer.Adam(learning_rate=0.01)
 
 # Pick FullSum or MCMC
 # vstate = nk.vqs.FullSumState(hi, model)
-vstate = nk.vqs.MCState(sampler, model, n_samples=2**8)
+vstate = nk.vqs.MCState(sampler, model, n_samples=2**11)
 
 # Tune diag_shift
 preconditioner = nk.optimizer.SR(diag_shift=1e-2)
